@@ -7,7 +7,7 @@ spec:
   destination:
     namespace: demo-app
     server: https://kubernetes.default.svc
-  project: demo-app
+  project: default
   source:
     directory:
       recurse: true
