@@ -11,6 +11,6 @@ spec:
   source:
     directory:
       recurse: true
-    path: cluster
+    path: configuration
     repoURL: https://github.com/varodrig/demo-rh-tech-exchange-2023/
     targetRevision: HEAD
