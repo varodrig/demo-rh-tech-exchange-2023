@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argo-setup
-  namespace: openshift-gitops
+  name: demo-app
+  namespace: demo-app
 spec:
   destination:
-    namespace: default
+    namespace: demo-app
     server: https://kubernetes.default.svc
-  project: default
+  project: demo-app
   source:
     directory:
       recurse: true
-    path: cluster
+    path: app
     repoURL: https://github.com/varodrig/demo-rh-tech-exchange-2023/
     targetRevision: main
