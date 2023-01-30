@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo-app
+  namespace: demo-app
+spec:
+  destination:
+    namespace: demo-app
+    server: https://kubernetes.default.svc
+  project: demo-app
+  source:
+    directory:
+      recurse: true
+    path: app
+    repoURL: https://github.com/varodrig/demo-rh-tech-exchange-2023/
+    targetRevision: main
